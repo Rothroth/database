@@ -1,0 +1,14 @@
+<table class="table">
+  <tr class="success">
+    <th class="text-center"><%=field.label(:summary) %></th>
+    <th class="text-center"><%=field.label(:description) %></th>
+    <th class="text-center"><%=field.label(:solved) %></th>
+    <th class="text-center"><%=field.label(:notes) %></th>
+  </tr>
+  <tr>
+    <td class="text-center"><%=field.text_area(:summary, size: "30x10") %></td>
+    <td class="text-center"><%=field.text_area(:description, size: "30x10") %></td>
+    <td class="text-center"><%=field.text_area(:solved, size: "30x10") %></td>
+    <td class="text-center"><%=field.text_area(:notes, size: "30x10") %></td>
+  </tr>
+</table>

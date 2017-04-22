@@ -1,0 +1,40 @@
+<div class="container parallax">
+
+<h1 class="">All Articles</h1>
+<hr>
+
+<div class="row">
+  <div class="col-xs-11"><%= link_to("Add new article", {:action => "new"}, :class => "btn btn-success") %></div>
+
+  <div class="col-sx-1"><p class="">Amount: <%= @article.size %></p></div>
+</div>
+
+<tbody>
+<table class="table table-hover text-center" style="">
+  <tr class="active">
+    <th class="text-center">ID</th>
+    <th class="text-center">Summary</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Solved?</th>
+    <th class="text-center">Notes</th>
+    <th class="text-center">Actions</th>
+  </tr>
+
+<% @article.each do |article| %>
+    <tr class="">
+      <td class="id vert-align"><%= article.id %></td>
+      <td class="vert-align"><%= article.summary %></td>
+      <td class="vert-align"><%= article.description %></td>
+      <td class="solved vert-align"><%= article.solved %></td>
+      <td class="vert-align" style="white-space:pre-line"><%= article.notes %></td>
+      <td class="buttons vert-align">
+          <%= link_to("Show", {:action => "show", :id => article.id}, :class => "btn btn-info btn-xs") %>
+          <%= link_to("Edit", {:action => "edit", :id => article.id}, :class => "btn btn-success btn-xs") %>
+          <%= link_to("Delete", {:action => "delete", :id => article.id}, :class => "btn btn-danger btn-xs") %>
+      </th>
+    </tr>
+<% end %>
+
+</table>
+</tbody>
+</div>

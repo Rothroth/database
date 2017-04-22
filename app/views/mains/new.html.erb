@@ -1,0 +1,14 @@
+<h1>New Article</h1>
+<hr>
+
+<%= link_to("Back", {:action => "index"}, :class => "btn btn-primary") %>
+
+<%= form_for(:article, :url => {:action => "create"}) do |field| %>
+
+<%= render(:partial => "form", :locals => {:field => field}) %>
+
+<div>
+  <%= submit_tag("Create") %>
+</div>
+
+<%end %>

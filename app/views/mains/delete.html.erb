@@ -1,0 +1,37 @@
+<h1>Delete Article <%= @article.id %> </h1>
+<hr>
+<%= link_to("Back", {:action => "index"}, :class => "btn btn-primary") %>
+
+<%= form_for(:article, :url => {:action => "deletion", :id => @article.id}) do |field| %>
+
+<h3 class="text-center">Do you realy want to delete the below article?</h3>
+
+<tbody>
+<table class="table table-hover text-center">
+  <tr class="success">
+    <th>ID</th>
+    <th class="text-center">Summary</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Solved?</th>
+    <th class="text-center">Notes</th>
+    <th class="text-center">Created</th>
+    <th class="text-center">Updated</th>
+  </tr>
+  <tr>
+    <td class="id vert-align"><%= @article.id %></td>
+    <td class="vert-align"><%= @article.summary %></td>
+    <td class="vert-align"><%= @article.description %></td>
+    <td class="solved vert-align"><%= @article.solved %></td>
+    <td class="vert-align" style="white-space:pre-line"><%= @article.notes %></td>
+    <td class="vert-align time"><%= @article.created_at.strftime("%d-%m-%Y") %></td>
+    <td class="vert-align time"><%= @article.updated_at.strftime("%d-%m-%Y") %></td>
+  </tr>
+</table>
+</tbody>
+
+
+<div class="text-center">
+  <%= submit_tag("Delete", :class => "btn btn-danger") %>
+</div>
+
+<%end %>

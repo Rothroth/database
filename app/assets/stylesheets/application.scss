@@ -1,0 +1,80 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: image-url('congruent_outline.png');
+  background-attachment: fixed;
+}
+.tbody {
+  margin-bottom: 100px;
+}
+
+table, td, th {
+    table-layout: auto;
+    background-color: rgba(255,255,255,0.15);
+    color: black;
+}
+td {
+  width: 230px;
+}
+
+td.solved {
+  width: 30px;
+}
+
+td.id {
+  width: 20px;
+}
+
+td.buttons {
+  width: 120px;
+}
+td.time {
+  width: 80px;
+}
+.footer {
+    width:100%;
+    min-height:20px;
+    padding: 3px;
+    background-color: #eff0f1; /* This color gets inverted color or you can add navbar inverse class in html */
+}
+.navbar-fixed-bottom {
+    bottom: -5px;
+}
+p {
+    margin: 0;
+    color: black;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
+hr {
+ border: 0;
+ height: 1px;
+ width: 400px;
+ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ margin-top: 10px;
+}
+
+.table tbody>tr>td.vert-align
+{
+    vertical-align: middle;
+}
+
+.parallax {
+    /* The image used */
+
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

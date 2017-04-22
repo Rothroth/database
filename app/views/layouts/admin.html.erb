@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WorkDatabase</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+        <%= yield %>
+    </div>
+
+
+<footer class="footer navbar-fixed-bottom">
+      <div class="container">
+        <p class="text-muted text-center">Rothroth 2017 &copy;. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
