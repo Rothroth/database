@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string "notes"
       t.timestamps
     end
-    add_index("articles", "article")
+  #  add_index("articles", "article")
   end
 
   def down
